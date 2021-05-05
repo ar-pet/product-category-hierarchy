@@ -28,10 +28,10 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @ApiOperation(value = "Deletes a specified product")
+    @ApiOperation(value = "Deletes the specified product")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "The product was successfully deleted for the given ID"),
-            @ApiResponse(code = 404, message = "No category found with the given ID")
+            @ApiResponse(code = 404, message = "No product found with the given ID")
     })
     @DeleteMapping("/{id}")
     public void deleteProduct(@PathVariable long id) {
@@ -40,8 +40,8 @@ public class ProductController {
 
     @ApiOperation(value = "Creates a new product")
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "The category was successfully found for the given ID"),
-            @ApiResponse(code = 400, message = "Provided category data is invalid"),
+            @ApiResponse(code = 200, message = "The product was successfully created"),
+            @ApiResponse(code = 400, message = "Provided product data is invalid"),
     })
     @PostMapping
     public ResponseEntity<ProductResponse> createProduct(@RequestBody ProductRequest productRequest) {

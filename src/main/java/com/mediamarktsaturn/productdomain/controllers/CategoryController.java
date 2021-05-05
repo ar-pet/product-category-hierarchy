@@ -48,11 +48,11 @@ public class CategoryController {
         return ResponseEntity.ok(categoryResponse);
     }
 
-    @ApiOperation(value = "Deletes a specified category")
+    @ApiOperation(value = "Deletes the specified category")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "The category was successfully deleted for the given ID"),
             @ApiResponse(code = 404, message = "No category found with the given ID"),
-            @ApiResponse(code = 400, message = "The category can not be deleted because of subcategories or products"),
+            @ApiResponse(code = 400, message = "The category can not be deleted because of subcategories"),
     })
     @DeleteMapping("/{id}")
     public void deleteCategory(@PathVariable long id) {

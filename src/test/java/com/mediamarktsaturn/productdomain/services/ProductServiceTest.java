@@ -19,11 +19,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -42,8 +39,6 @@ public class ProductServiceTest {
     private ProductConverter productConverter;
     @Captor
     private ArgumentCaptor<Product> productCaptor;
-    @Captor
-    private ArgumentCaptor<Iterable<Category>> categoriesCaptor;
 
     private ProductService underTest;
 
