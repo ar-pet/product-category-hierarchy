@@ -1,0 +1,139 @@
+
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
+----categories----
+
+-- create a catgory (take its ID)
+{
+  "name": "Full HD TV",
+  "superCategoryId": 204
+}
+
+-- update the category
+ID = 1
+{
+  "name": "HD TV",
+  "superCategoryId": 205
+}
+
+-- delete the category
+ID = 1
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------
+-----------------------------------
+-----------------------------------
+
+----products----
+
+-- create a product (take its ID)
+{
+  "categoryIds": [
+    204,
+    211
+  ],
+  "longDescription": "Die Neuauflage des preisgekrönten Jockey 3 ME: Reloop Jockey 3 Remix.",
+  "name": "JOCKEY 3 REMIX",
+  "shortDescription": "Professioneller 4-Deck-MIDI-Controller",
+  "status": "ACTIVE"
+}
+
+-- update a product (take its ID)
+{
+  "categoryIds": [
+    204,
+    212
+  ],
+  "longDescription": "Die Neuauflage des preisgekrönten Jockey 3",
+  "name": "JOCKEY 3",
+  "shortDescription": "4-Deck-MIDI-Controller",
+  "status": "ACTIVE"
+}
+
+-- get the category path of the product
+
+-- delete the product (take its ID)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------
+-- helper queries --
+delete from category_product where product_id = 4
+delete  from products where product_id = 4
